@@ -1,26 +1,21 @@
-function mergeUserArrays(...arrays) {
-  const mergedArray = [].concat(...arrays);
+const datejs = require('datejs');
 
-  const mergeDate = new Date();
-  
-  return {
-    users: mergedArray,
-    mergeDate: mergeDate,
-    totalUsers: mergedArray.length
+function combineUsers(...args) {
+  const combinedObject = {
+    users: []
   };
+
+  
+  for (let arr of args) {
+    combinedObject.users.push(...arr);
+  }
+
+  
+  combinedObject.merge_date = new Date().toString('M/d/yyyy');
+
+  
+  return combinedObject;
 }
-
-const usersFromSiteA = ["alice123", "don.dev", "charlie_codes"];
-const usersFromSiteB = ["kim_po$$ible", "ava_wilson", "champ.s"];
-const usersFromSiteC = ["grace_345"];
-
-const result = mergeUserArrays(
-  usersFromSiteA,
-  usersFromSiteB,
-  usersFromSiteC
-);
-
-console.log(result);
 
 
 module.exports = {
