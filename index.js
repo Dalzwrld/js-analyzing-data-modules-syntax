@@ -10,9 +10,9 @@ function mergeUserArrays(...arrays) {
   };
 }
 
-const usersFromSiteA = ["alice123", "bob_dev", "charlie_codes"];
-const usersFromSiteB = ["diana_smith", "eve_wilson", "frank_lee"];
-const usersFromSiteC = ["grace_lin"];
+const usersFromSiteA = ["alice123", "don.dev", "charlie_codes"];
+const usersFromSiteB = ["kim_po$$ible", "ava_wilson", "champ.s"];
+const usersFromSiteC = ["grace_345"];
 
 const result = mergeUserArrays(
   usersFromSiteA,
